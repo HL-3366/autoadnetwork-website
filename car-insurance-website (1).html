@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AutoAd Network - Professional Car Insurance Solutions</title>
+    <meta name="description" content="Get instant car insurance quotes from top-rated providers. Fast, easy, and affordable coverage for all drivers.">
+    <meta name="keywords" content="car insurance, auto insurance, insurance quotes, car coverage">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #1e40af;
+            --secondary-color: #0f172a;
+            --accent-color: #dc2626;
+            --light-gray: #f3f4f6;
+            --text-dark: #1f2937;
+            --text-light: #6b7280;
+            --border-color: #e5e7eb;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: #ffffff;
+        }
+
+        /* Header & Navigation */
+        header {
+            background: linear-gradient(135deg, var(--secondary-color) 0%, var(--primary-color) 100%);
+            color: white;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            transition: opacity 0.3s;
+        }
+
+        .nav-links a:hover {
+            opacity: 0.8;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--secondary-color) 0%, var(--primary-color) 100%);
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 20px;
+            margin-bottom: 30px;
+            opacity: 0.95;
+        }
+
+        .cta-button {
+            background: var(--accent-color);
+            color: white;
+            padding: 16px 40px;
+            font-size: 18px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .cta-button:hover {
+            background: #b91c1c;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(220, 38, 38, 0.3);
+        }
+
+        .cta-button:active {
+            transform: translateY(0);
+        }
+
+        /* Features Section */
+        .features {
+            max-width: 1200px;
+            margin: 80px auto;
+            padding: 0 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 50px;
+            color: var(--secondary-color);
+            font-weight: 700;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .feature-card {
+            background: var(--light-gray);
+            padding: 30px;
+            border-radius: 12px;
+            text-align: center;
+            transition: all 0.3s;
+            border: 1px solid var(--border-color);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            background: white;
+        }
+
+        .feature-icon {
+            font-size: 48px;
+            margin-bottom: 15px;
+        }
+
+        .feature-card h3 {
+            font-size: 20px;
+            margin-bottom: 15px;
+            color: var(--primary-color);
+        }
+
+        .feature-card p {
+            color: var(--text-light);
+            line-height: 1.8;
+        }
+
+        /* How It Works Section */
+        .how-it-works {
+            background: var(--light-gray);
+            padding: 80px 20px;
+            margin-top: 80px;
+        }
+
+        .how-it-works-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .steps-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .step {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            text-align: center;
+            border-left: 4px solid var(--primary-color);
+        }
+
+        .step-number {
+            background: var(--primary-color);
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            font-weight: bold;
+            margin: 0 auto 15px;
+        }
+
+        .step h3 {
+            font-size: 18px;
+            margin-bottom: 10px;
+            color: var(--secondary-color);
+        }
+
+        .step p {
+            color: var(--text-light);
+            font-size: 14px;
+        }
+
+        /* Why Choose Us Section */
+        .why-choose-us {
+            max-width: 1200px;
+            margin: 80px auto;
+            padding: 0 20px;
+        }
+
+        .why-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .why-content h2 {
+            font-size: 32px;
+            margin-bottom: 20px;
+            color: var(--secondary-color);
+        }
+
+        .why-content p {
+            color: var(--text-light);
+            margin-bottom: 15px;
+            line-height: 1.8;
+        }
+
+        .benefits-list {
+            list-style: none;
+            margin-top: 30px;
+        }
+
+        .benefits-list li {
+            padding: 12px 0;
+            padding-left: 30px;
+            position: relative;
+            color: var(--text-dark);
+        }
+
+        .benefits-list li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--accent-color);
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        .why-image {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            height: 400px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 18px;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* Testimonials Section */
+        .testimonials {
+            background: var(--light-gray);
+            padding: 80px 20px;
+            margin-top: 80px;
+        }
+
+        .testimonials-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .testimonial-card {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+
+        .stars {
+            color: #fbbf24;
+            font-size: 18px;
+            margin-bottom: 15px;
+        }
+
+        .testimonial-text {
+            color: var(--text-dark);
+            margin-bottom: 15px;
+            font-style: italic;
+            line-height: 1.8;
+        }
+
+        .testimonial-author {
+            font-weight: 600;
+            color: var(--primary-color);
+        }
+
+        /* FAQ Section */
+        .faq {
+            max-width: 1000px;
+            margin: 80px auto;
+            padding: 0 20px;
+        }
+
+        .faq-item {
+            background: white;
+            border: 1px solid var(--border-color);
+            margin-bottom: 15px;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .faq-question {
+            padding: 20px;
+            background: var(--light-gray);
+            cursor: pointer;
+            font-weight: 600;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background 0.3s;
+        }
+
+        .faq-question:hover {
+            background: #e5e7eb;
+        }
+
+        .faq-answer {
+            padding: 20px;
+            color: var(--text-light);
+            display: none;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        .faq-toggle {
+            font-size: 20px;
+            transition: transform 0.3s;
+        }
+
+        .faq-item.active .faq-toggle {
+            transform: rotate(180deg);
+        }
+
+        /* CTA Section */
+        .final-cta {
+            background: linear-gradient(135deg, var(--secondary-color) 0%, var(--primary-color) 100%);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+            margin-top: 80px;
+        }
+
+        .final-cta h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .final-cta p {
+            font-size: 18px;
+            margin-bottom: 30px;
+            opacity: 0.95;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--secondary-color);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            transition: opacity 0.3s;
+        }
+
+        .footer-links a:hover {
+            opacity: 0.8;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.2);
+            padding-top: 20px;
+            font-size: 14px;
+            opacity: 0.8;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 32px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            .nav-links {
+                gap: 15px;
+                font-size: 14px;
+            }
+
+            .why-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .why-image {
+                height: 300px;
+            }
+
+            .section-title {
+                font-size: 28px;
+            }
+        }
+
+        /* Loading Spinner */
+        .loading {
+            display: none;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .spinner {
+            border: 4px solid rgba(255,255,255,0.3);
+            border-top: 4px solid white;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <div class="logo">AutoAd Network</div>
+            <ul class="nav-links">
+                <li><a href="#features">Features</a></li>
+                <li><a href="#how-it-works">How It Works</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Get Instant Car Insurance Quotes</h1>
+            <p>Compare rates from top-rated insurers and save up to 40% on your car insurance</p>
+            <button class="cta-button" onclick="getQuote()">Get Your Free Quote Now</button>
+            <div class="loading" id="loading">
+                <div class="spinner"></div>
+                <p>Redirecting to quotes...</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <h2 class="section-title">Why Choose Us?</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">⚡</div>
+                <h3>Instant Quotes</h3>
+                <p>Get personalized insurance quotes in seconds. No long forms or waiting.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">💰</div>
+                <h3>Save Money</h3>
+                <p>Compare rates from multiple insurers and save up to 40% on premiums.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🛡️</div>
+                <h3>Top Insurers</h3>
+                <p>Access quotes from the most trusted and reliable insurance companies.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">📱</div>
+                <h3>Mobile Friendly</h3>
+                <p>Get quotes anytime, anywhere on your phone or computer.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">✓</div>
+                <h3>100% Free</h3>
+                <p>No hidden fees. Get quotes completely free with no obligations.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🔒</div>
+                <h3>Secure & Safe</h3>
+                <p>Your information is protected with industry-leading security standards.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="how-it-works" id="how-it-works">
+        <div class="how-it-works-content">
+            <h2 class="section-title">How It Works</h2>
+            <div class="steps-grid">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Enter Your Info</h3>
+                    <p>Provide basic information about yourself and your vehicle.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>Get Quotes</h3>
+                    <p>Receive instant quotes from multiple insurance providers.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Compare & Save</h3>
+                    <p>Compare rates and coverage options side by side.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <h3>Choose & Enroll</h3>
+                    <p>Select the best plan and complete enrollment online.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="why-choose-us">
+        <div class="why-grid">
+            <div class="why-content">
+                <h2>We Make Insurance Simple</h2>
+                <p>Getting car insurance shouldn't be complicated. Our platform simplifies the entire process, from quote comparison to enrollment.</p>
+                <p>Whether you're a new driver, a parent, or looking to switch providers, we have options for everyone.</p>
+                <ul class="benefits-list">
+                    <li>Free quotes with no obligations</li>
+                    <li>Compare multiple insurers instantly</li>
+                    <li>Expert customer support 24/7</li>
+                    <li>Secure and encrypted data protection</li>
+                    <li>Fast and easy enrollment process</li>
+                    <li>Transparent pricing with no hidden fees</li>
+                </ul>
+            </div>
+            <div class="why-image">
+                <div style="text-align: center;">
+                    <div style="font-size: 60px; margin-bottom: 10px;">🚗</div>
+                    <p>Professional Car Insurance Solutions</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="testimonials-content">
+            <h2 class="section-title">What Our Customers Say</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">"I saved $600 per year by comparing quotes on this platform. Highly recommended!"</p>
+                    <p class="testimonial-author">- Sarah M., California</p>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">"The process was so easy. I got quotes in minutes and found the perfect coverage."</p>
+                    <p class="testimonial-author">- John D., Texas</p>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">"Great service! The customer support team helped me find the best rates."</p>
+                    <p class="testimonial-author">- Emily R., Florida</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq" id="faq">
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleFAQ(this)">
+                <span>Is it really free to get quotes?</span>
+                <span class="faq-toggle">▼</span>
+            </div>
+            <div class="faq-answer">
+                Yes, absolutely! Getting quotes through our platform is 100% free. There are no hidden fees, and you have no obligation to purchase any insurance policy.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleFAQ(this)">
+                <span>How long does it take to get quotes?</span>
+                <span class="faq-toggle">▼</span>
+            </div>
+            <div class="faq-answer">
+                Most users receive instant quotes within seconds of submitting their information. In some cases, it may take a few minutes for all quotes to arrive.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleFAQ(this)">
+                <span>Is my personal information secure?</span>
+                <span class="faq-toggle">▼</span>
+            </div>
+            <div class="faq-answer">
+                Yes, we use industry-leading encryption and security protocols to protect your personal information. Your data is never shared with third parties without your consent.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleFAQ(this)">
+                <span>Can I get quotes if I have a poor driving record?</span>
+                <span class="faq-toggle">▼</span>
+            </div>
+            <div class="faq-answer">
+                Yes! We work with insurers who specialize in all types of drivers, including those with accidents or violations. You'll still get multiple quote options.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleFAQ(this)">
+                <span>Do I have to buy insurance through your site?</span>
+                <span class="faq-toggle">▼</span>
+            </div>
+            <div class="faq-answer">
+                No, you're under no obligation to purchase. We simply provide quotes so you can compare and make an informed decision.
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA Section -->
+    <section class="final-cta">
+        <div>
+            <h2>Ready to Save on Car Insurance?</h2>
+            <p>Get your free quotes today and start saving money</p>
+            <button class="cta-button" onclick="getQuote()">Get Your Free Quote Now</button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Contact Us</a>
+                <a href="#">About Us</a>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 AutoAd Network. All rights reserved. | Professional Car Insurance Solutions</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleFAQ(element) {
+            const faqItem = element.parentElement;
+            faqItem.classList.toggle('active');
+        }
+
+        function getQuote() {
+            // Show loading animation
+            document.getElementById('loading').style.display = 'block';
+            const button = event.target;
+            button.disabled = true;
+
+            // Get URL parameters for tracking
+            const urlParams = new URLSearchParams(window.location.search);
+            const offerId = urlParams.get('offer_id') || '17217';
+            const affId = urlParams.get('aff_id') || '1222';
+
+            // Redirect after 500ms
+            setTimeout(() => {
+                window.location.href = `http://taptap.oltracer.com/index.php?offer_id=${offerId}&aff_id=${affId}`;
+            }, 500);
+        }
+
+        // Auto-scroll to section if hash is present
+        window.addEventListener('load', () => {
+            if (window.location.hash) {
+                const element = document.querySelector(window.location.hash);
+                if (element) {
+                    element.scrollIntoView({ behavior: 'smooth' });
+                }
+            }
+        });
+    </script>
+</body>
+</html>

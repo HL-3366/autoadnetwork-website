@@ -1,0 +1,4 @@
+name = "autoadnetwork-site"
+type = "javascript"
+main = "index.js"
+compatibility_date = "2024-01-01"
